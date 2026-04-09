@@ -8,7 +8,6 @@ import {
   intentItems,
   problemItems,
   processItems,
-  quickTags,
   situationsItems,
   trustCards,
 } from "@/lib/landing-content";
@@ -87,21 +86,6 @@ export function HeroSection() {
               Jak to probíhá
             </a>
           </div>
-          <div className="mt-6 flex flex-col gap-2 text-sm text-slate-300 sm:flex-row sm:gap-6">
-            <span>Bez závazku</span>
-            <span>Bez velkého ERP projektu</span>
-            <span>Možnost návrhu i realizace</span>
-          </div>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {quickTags.map((tag) => (
-              <div
-                key={tag}
-                className="rounded-2xl border border-slate-800 bg-white/5 px-4 py-3 text-sm text-slate-200"
-              >
-                {tag}
-              </div>
-            ))}
-          </div>
         </div>
       </Container>
     </section>
@@ -112,8 +96,8 @@ export function TrustSection() {
   return (
     <section className="bg-white">
       <Container className="py-12">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="rounded-[2rem] border border-slate-200 bg-[var(--color-cream)] p-8">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+          <div className="h-full rounded-[2rem] border border-slate-200 bg-[var(--color-cream)] p-8">
             <div className="flex items-center gap-4">
               <Image
                 src="/ondrej-halata.jpg"
@@ -126,6 +110,38 @@ export function TrustSection() {
               <div>
                 <h2 className="text-xl font-heading font-bold text-slate-900">Ondřej Halata</h2>
                 <p className="mt-1 text-sm text-slate-600">Vývojář a IT konzultant</p>
+                <div className="mt-2 flex flex-wrap items-center gap-x-2 text-sm text-slate-600">
+                  <a
+                    href={siteConfig.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-slate-300 underline-offset-2 hover:text-slate-900"
+                  >
+                    LinkedIn
+                  </a>
+                  <span aria-hidden="true" className="text-slate-400">
+                    |
+                  </span>
+                  <a
+                    href={siteConfig.navolnenoze}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-slate-300 underline-offset-2 hover:text-slate-900"
+                  >
+                    Na volné noze
+                  </a>
+                  <span aria-hidden="true" className="text-slate-400">
+                    |
+                  </span>
+                  <a
+                    href={siteConfig.siteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-slate-300 underline-offset-2 hover:text-slate-900"
+                  >
+                    halatao.cz
+                  </a>
+                </div>
               </div>
             </div>
             <p className="mt-5 text-base leading-7 text-slate-600">
@@ -137,11 +153,18 @@ export function TrustSection() {
               aby firma měla přehled, jasný další krok a méně provozního chaosu.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {trustCards.map((card) => (
-              <article key={card.title} className="rounded-3xl border border-slate-200 bg-white p-6">
+          <div className="grid gap-4 md:grid-cols-2 auto-rows-fr">
+            {trustCards.map((card, index) => (
+              <article
+                key={card.title}
+                className={`flex h-full flex-col rounded-[2rem] border border-slate-200 bg-white p-7 ${
+                  index === trustCards.length - 1 ? "md:col-span-2" : ""
+                }`}
+              >
                 <h3 className="text-base font-heading font-bold text-slate-900">{card.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{card.description}</p>
+                <p className="mt-3 max-w-[34ch] text-sm leading-6 text-slate-600">
+                  {card.description}
+                </p>
               </article>
             ))}
           </div>
@@ -406,8 +429,8 @@ export function FooterSection() {
           <a href={siteConfig.linkedIn} className="hover:text-slate-900" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
-          <a href={siteConfig.github} className="hover:text-slate-900" target="_blank" rel="noreferrer">
-            GitHub
+          <a href={siteConfig.navolnenoze} className="hover:text-slate-900" target="_blank" rel="noreferrer">
+            Na volné noze
           </a>
           <a
             href={siteConfig.siteUrl}

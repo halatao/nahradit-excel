@@ -8,6 +8,7 @@ export const siteConfig = {
   phone: "+420602690920",
   phoneDisplay: "+420 602 690 920",
   linkedIn: "https://www.linkedin.com/in/halatao/",
+  navolnenoze: "https://navolnenoze.cz/prezentace/ondrej-halata/",
   github: "https://github.com/halatao/",
   calendly: "https://calendly.com/ondrej-halata/30min",
   cookiebotId: "c016eaf8-a8fe-4cfe-9693-727411d95ca8",
