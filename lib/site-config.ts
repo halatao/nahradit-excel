@@ -13,7 +13,7 @@ export const siteConfig = {
   calendly: "https://calendly.com/ondrej-halata/30min",
   cookiebotId: "c016eaf8-a8fe-4cfe-9693-727411d95ca8",
   gtmId: "GTM-M63V79JM",
-  gaMeasurementId: "G-81431TQEDR",
+  gaMeasurementId: "G-LT3TYJS6PZ",
   ico: "21727236",
 } as const;
 
