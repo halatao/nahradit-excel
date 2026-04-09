@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nahradit-excel-landing
 
-## Getting Started
+Samostatná výkonová landing page v Next.js, TypeScriptu a Tailwind CSS pro lead generation z Google Ads.
 
-First, run the development server:
+## Skripty
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Lokálně poběží na `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Struktura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/page.tsx` hlavní landing page
+- `app/dekuji/page.tsx` děkovací stránka
+- `app/api/lead/route.ts` jednoduchý placeholder submit endpoint
+- `components/landing/sections.tsx` obsahové sekce landing page
+- `components/landing/lead-form.tsx` klientský formulář a validace
+- `components/analytics.tsx` GTM a GA skripty
+- `lib/site-config.ts` kontaktní a business údaje
+- `lib/analytics.ts` zapouzdření analytics konfigurace
+- `lib/landing-content.ts` textový obsah sekcí
 
-## Learn More
+## Kde co změnit
 
-To learn more about Next.js, take a look at the following resources:
+- Kontaktní údaje a právní informace: `lib/site-config.ts`
+- GTM a GA ID: `lib/site-config.ts`
+- Texty sekcí: `lib/landing-content.ts`
+- Odesílání leadů do reálného backendu / CRM: `app/api/lead/route.ts`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Poznámky
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Formulář teď odesílá data do jednoduché API route a po úspěchu přesměruje na `/dekuji`.
+- Implementace analytics je oddělená, takže jde snadno vypnout nebo nahradit.
+- Profilová fotka je uložená lokálně v `public/ondrej-halata.jpg`.
