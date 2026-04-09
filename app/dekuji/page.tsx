@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ThankYouTracker } from "@/components/analytics/thank-you-tracker";
 import { Header } from "@/components/landing/sections";
 import { landingConfig, siteConfig } from "@/lib/site-config";
 
@@ -15,6 +16,7 @@ export default function ThankYouPage() {
   return (
     <>
       <Header compact />
+      <ThankYouTracker />
       <main className="bg-[var(--color-night)] px-4 py-16 text-white sm:px-6 lg:px-8">
         <section className="mx-auto grid w-full max-w-6xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="rounded-[2rem] border border-white/10 bg-white/6 p-8 shadow-[0_24px_80px_rgba(15,23,42,0.35)] backdrop-blur sm:p-12">

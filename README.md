@@ -17,12 +17,15 @@ Lokálně poběží na `http://localhost:3000`.
 
 - `app/page.tsx` hlavní landing page
 - `app/dekuji/page.tsx` děkovací stránka
-- `app/api/lead/route.ts` jednoduchý placeholder submit endpoint
+- `app/api/lead/route.ts` nevyužitý placeholder submit endpoint
 - `components/landing/sections.tsx` obsahové sekce landing page
 - `components/landing/lead-form.tsx` klientský formulář a validace
-- `components/analytics.tsx` GTM a GA skripty
+- `components/analytics.tsx` GTM skript
+- `components/analytics/tracked-link.tsx` jednoduché click tracking komponenty
+- `components/analytics/thank-you-tracker.tsx` thank-you page event do `dataLayer`
 - `lib/site-config.ts` kontaktní a business údaje
 - `lib/analytics.ts` zapouzdření analytics konfigurace
+- `lib/data-layer.ts` helper pro `dataLayer.push(...)`
 - `lib/landing-content.ts` textový obsah sekcí
 
 ## Kde co změnit
@@ -32,8 +35,22 @@ Lokálně poběží na `http://localhost:3000`.
 - Texty sekcí: `lib/landing-content.ts`
 - Odesílání leadů do reálného backendu / CRM: `app/api/lead/route.ts`
 
+## Analytics
+
+- Landing page používá jednu čistou cestu měření přes Google Tag Manager v `components/analytics.tsx`.
+- Přímé načítání `gtag.js` se nepoužívá, aby nehrozilo duplicitní měření vedle GTM.
+- GA4 doporučeně připojte uvnitř GTM pomocí hodnoty `gaMeasurementId` z `lib/site-config.ts`.
+- Připravené základní eventy do `dataLayer`:
+  - klik na CTA v headeru
+  - klik na hlavní CTA v hero
+  - klik na e-mailový odkaz na landing page
+  - návštěva děkovací stránky jako `lead_thank_you_view`
+- Doporučená hlavní konverze v GA4 i Google Ads je návštěva `/dekuji`.
+- Pro ověření leadu je nejjednodušší nastavit conversion podle page path `/dekuji`; vlastní submit event není nutný.
+
 ## Poznámky
 
-- Formulář teď odesílá data do jednoduché API route a po úspěchu přesměruje na `/dekuji`.
+- Formulář teď používá Formspree a po úspěchu přesměruje na `/dekuji`.
+- `app/api/lead/route.ts` je momentálně nevyužitá a může se později smazat, pokud ji nebudete chtít držet jako rezervu.
 - Implementace analytics je oddělená, takže jde snadno vypnout nebo nahradit.
 - Profilová fotka je uložená lokálně v `public/ondrej-halata.jpg`.

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { TrackedAnchor } from "@/components/analytics/tracked-link";
 import { LeadForm } from "@/components/landing/lead-form";
 import {
   faqItems,
@@ -40,12 +40,14 @@ export function Header({ compact = false }: Readonly<{ compact?: boolean }>) {
           {landingConfig.name}
         </div>
         {!compact ? (
-          <a
+          <TrackedAnchor
             href="#formular"
             className="inline-flex min-h-11 items-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+            analyticsEvent="cta_click"
+            analyticsLabel="header_cta"
           >
             Zjistit, co má smysl řešit jako první
-          </a>
+          </TrackedAnchor>
         ) : null}
       </Container>
     </header>
@@ -73,12 +75,14 @@ export function HeroSection() {
             a podle potřeby ho i rychle zavedu do praxe.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a
+            <TrackedAnchor
               href="#formular"
               className="inline-flex min-h-12 items-center justify-center rounded-2xl bg-[var(--color-accent)] px-6 py-3 text-base font-semibold text-slate-950 transition hover:bg-[var(--color-accent-strong)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+              analyticsEvent="cta_click"
+              analyticsLabel="hero_primary_cta"
             >
               Zjistit, co má smysl řešit jako první
-            </a>
+            </TrackedAnchor>
             <a
               href="#jak-to-probiha"
               className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-slate-700 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
@@ -400,9 +404,14 @@ export function LeadFormSection() {
           <LeadForm />
           <div className="mt-6 border-t border-slate-200 pt-6 text-sm leading-6 text-slate-500">
             Raději to chcete nejdřív stručně probrat e-mailem? Napište na{" "}
-            <a href={`mailto:${siteConfig.email}`} className="font-medium text-slate-900 underline">
+            <TrackedAnchor
+              href={`mailto:${siteConfig.email}`}
+              className="font-medium text-slate-900 underline"
+              analyticsEvent="email_click"
+              analyticsLabel="lead_form_email"
+            >
               {siteConfig.email}
-            </a>
+            </TrackedAnchor>
             .
           </div>
         </div>
@@ -419,9 +428,14 @@ export function FooterSection() {
           © 2026 {landingConfig.name}
           <br />
           {siteConfig.legalName} ·{" "}
-          <a href={`mailto:${siteConfig.email}`} className="hover:text-slate-900">
+          <TrackedAnchor
+            href={`mailto:${siteConfig.email}`}
+            className="hover:text-slate-900"
+            analyticsEvent="email_click"
+            analyticsLabel="footer_email"
+          >
             {siteConfig.email}
-          </a>
+          </TrackedAnchor>
           <br />
           IČO: {siteConfig.ico} · {siteConfig.phoneDisplay}
         </div>
