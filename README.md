@@ -39,7 +39,7 @@ Lokálně poběží na `http://localhost:3000`.
 
 - Landing page používá jednu čistou cestu měření přes Google Tag Manager v `components/analytics.tsx`.
 - Přímé načítání `gtag.js` se nepoužívá, aby nehrozilo duplicitní měření vedle GTM.
-- GA4 doporučeně připojte uvnitř GTM pomocí hodnoty `gaMeasurementId` z `lib/site-config.ts`.
+- Hodnota `gaMeasurementId` z `lib/site-config.ts` slouží jako referenční údaj pro nastavení GA4 tagu uvnitř GTM, ne pro přímé načítání v aplikaci.
 - Připravené základní eventy do `dataLayer`:
   - klik na CTA v headeru
   - klik na hlavní CTA v hero
@@ -47,6 +47,13 @@ Lokálně poběží na `http://localhost:3000`.
   - návštěva děkovací stránky jako `lead_thank_you_view`
 - Doporučená hlavní konverze v GA4 i Google Ads je návštěva `/dekuji`.
 - Pro ověření leadu je nejjednodušší nastavit conversion podle page path `/dekuji`; vlastní submit event není nutný.
+
+## Ověření GTM a GA4
+
+- Ověření, že GTM běží: otevřete web, zkontrolujte v DevTools přítomnost požadavku na `googletagmanager.com/gtm.js` a ověřte, že `window.dataLayer` existuje.
+- Ověření, že GA4 tag je publikovaný v GTM: použijte GTM Preview a potvrďte, že se po načtení stránky odpálí GA4 Configuration nebo Google tag pro měřicí ID `G-LT3TYJS6PZ`.
+- V GTM-only setupu nemusí být `window.gtag` dostupné v globálním scope. Samotná absence `window.gtag` tedy neznamená chybnou implementaci.
+- Správné end-to-end ověření je přes GTM Preview a současně přes GA4 Realtime, kde se musí projevit návštěva i očekávané eventy.
 
 ## Poznámky
 
