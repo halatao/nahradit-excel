@@ -16,9 +16,9 @@ const bodyFont = Source_Sans_3({
 
 export const metadata: Metadata = {
   metadataBase: new URL(landingConfig.siteUrl),
-  title: "Přehled v zakázkách bez velkého ERP projektu | nahradit-excel.cz",
+  title: "Nahradit Excel interním systémem na míru | nahradit-excel.cz",
   description:
-    "Ztrácíte přehled v poptávkách, nabídkách a zakázkách? Pomáhám firmám dát procesům jasný stav, další krok a sdílený přehled bez velkého ERP projektu.",
+    "Excel už nestačí na poptávky, nabídky a zakázky? Ondřej Halata navrhne a vyvine interní systém na míru, workflow nebo sdílený přehled bez velkého ERP projektu.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.png",
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "cs_CZ",
     url: landingConfig.siteUrl,
-    title: "Přehled v zakázkách bez velkého ERP projektu | nahradit-excel.cz",
+    title: "Nahradit Excel interním systémem na míru | nahradit-excel.cz",
     description:
-      "Pomáhám firmám dát poptávkám, nabídkám a zakázkám jasný stav, další krok a sdílený přehled bez velkého ERP projektu.",
+      "Pomáhám firmám nahradit přerostlý Excel jednoduchým interním systémem, workflow aplikací nebo sdíleným přehledem pro poptávky, nabídky a zakázky.",
     siteName: landingConfig.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Přehled v zakázkách bez velkého ERP projektu | nahradit-excel.cz",
+    title: "Nahradit Excel interním systémem na míru | nahradit-excel.cz",
     description:
-      "Pomáhám firmám dát poptávkám, nabídkám a zakázkám jasný stav, další krok a sdílený přehled bez velkého ERP projektu.",
+      "Pomáhám firmám nahradit přerostlý Excel jednoduchým interním systémem, workflow aplikací nebo sdíleným přehledem pro poptávky, nabídky a zakázky.",
   },
   robots: {
     index: true,
@@ -50,11 +50,18 @@ export const metadata: Metadata = {
   creator: siteConfig.displayName,
 };
 
-const organizationJsonLd = {
+const personJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: landingConfig.name,
-  url: landingConfig.siteUrl,
+  "@type": "Person",
+  name: siteConfig.legalName,
+  url: siteConfig.siteUrl,
+  email: siteConfig.email,
+  telephone: siteConfig.phone,
+  brand: {
+    "@type": "Brand",
+    name: landingConfig.name,
+    url: landingConfig.siteUrl,
+  },
   logo: `${landingConfig.siteUrl}/favicon.png`,
 } as const;
 
@@ -72,7 +79,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
           }}
         />
       </head>

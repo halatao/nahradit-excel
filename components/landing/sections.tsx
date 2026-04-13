@@ -6,6 +6,7 @@ import {
   fitItems,
   insightItems,
   intentItems,
+  practiceItems,
   problemItems,
   processItems,
   situationsItems,
@@ -46,7 +47,7 @@ export function Header({ compact = false }: Readonly<{ compact?: boolean }>) {
             analyticsEvent="cta_click"
             analyticsLabel="header_cta"
           >
-            Zjistit, co má smysl řešit jako první
+            Zjistit, jestli to dává smysl
           </TrackedAnchor>
         ) : null}
       </Container>
@@ -60,19 +61,19 @@ export function HeroSection() {
       <Container className="py-16 lg:py-20">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-            Rychlý první krok místo velkého projektu
+            Interní systém na míru místo přerostlého Excelu
           </p>
           <h1 className="mt-4 max-w-4xl font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Ztrácíte přehled v zakázkách?
-            <span className="block text-[var(--color-accent)]">Excel na tohle už nestačí.</span>
+            Nahraďte Excel sdíleným přehledem pro poptávky, nabídky a zakázky.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200 sm:text-xl">
-            Pomáhám menším a středním firmám dát poptávkám, nabídkám a zakázkám jasný stav,
-            další krok a sdílený přehled bez velkého ERP projektu.
+            Pomáhám menším a středním firmám dostat jasný stav zakázek, méně ruční práce,
+            méně chyb a jeden sdílený přehled místo tabulek, e-mailů a telefonů.
           </p>
           <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
-            Nejdřív společně určíme, kde se proces láme. Pak navrhnu první realistický krok
-            a podle potřeby ho i rychle zavedu do praxe.
+            Nemusí z toho být velké ERP. Začnu konkrétním problémem, navrhnu rozumnou první
+            etapu interního systému nebo workflow aplikace a podle potřeby ji i postavím.
+            Když bude stačit upravit současnou evidenci, řeknu to rovnou.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <TrackedAnchor
@@ -81,13 +82,13 @@ export function HeroSection() {
               analyticsEvent="cta_click"
               analyticsLabel="hero_primary_cta"
             >
-              Zjistit, co má smysl řešit jako první
+              Zjistit, jestli má smysl nahradit Excel
             </TrackedAnchor>
             <a
               href="#jak-to-probiha"
               className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-slate-700 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
-              Jak to probíhá
+              Jak vypadá první krok
             </a>
           </div>
         </div>
@@ -113,7 +114,9 @@ export function TrustSection() {
               />
               <div>
                 <h2 className="text-xl font-heading font-bold text-slate-900">Ondřej Halata</h2>
-                <p className="mt-1 text-sm text-slate-600">Vývojář a IT konzultant</p>
+                <p className="mt-1 text-sm text-slate-600">
+                  Vývojář interních systémů a workflow aplikací
+                </p>
                 <div className="mt-2 flex flex-wrap items-center gap-x-2 text-sm text-slate-600">
                   <a
                     href={siteConfig.linkedIn}
@@ -149,12 +152,12 @@ export function TrustSection() {
               </div>
             </div>
             <p className="mt-5 text-base leading-7 text-slate-600">
-              Pomáhám firmám dávat do pořádku interní procesy, workflow a systémy tam,
-              kde už e-mail, Excel a ruční dohledávání přestávají stačit.
+              Navrhuji a vyvíjím interní nástroje na míru tam, kde už Excel nestačí:
+              evidence zakázek, poptávky, nabídky, workflow mezi lidmi a provozní přehledy.
             </p>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Neřeším zbytečně velké projekty. Hledám nejkratší cestu k tomu,
-              aby firma měla přehled, jasný další krok a méně provozního chaosu.
+              Pracuji přímo s majiteli a týmy, které potřebují praktické řešení bez agenturní
+              vrstvy a bez tlaku na zbytečně velký projekt.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2 auto-rows-fr">
@@ -185,11 +188,11 @@ export function ProblemSection() {
         <div className="mx-auto max-w-3xl text-center">
           <SectionEyebrow>To je obvykle ten moment</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Kdy se přehled začne rozpadat
+            Kdy Excel začne brzdit firmu
           </h2>
           <p className="mt-4 text-lg leading-8 text-slate-600">
-            Ne proto, že by byl Excel sám o sobě špatný. Ale proto, že přes něj už držíte proces,
-            který potřebuje jasný stav, odpovědnost a návaznost mezi kroky.
+            Ne proto, že by byl Excel špatný. Ale jakmile v něm držíte více verzí souborů,
+            ruční předávání informací a stav zakázek, firma začne ztrácet jistotu i čas.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -210,9 +213,9 @@ export function IntentSection() {
     <section className="bg-white">
       <Container className="py-16">
         <div className="max-w-3xl">
-          <SectionEyebrow>S čím nejčastěji pomáhám</SectionEyebrow>
+          <SectionEyebrow>Co může nahradit tabulky</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Nejčastější situace, které firmy potřebují srovnat
+            Jednoduchý interní systém pro práci, která dnes běží v Excelu a e-mailu
           </h2>
         </div>
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -222,6 +225,19 @@ export function IntentSection() {
               <p className="mt-2 text-sm leading-6 text-slate-600">{item.description}</p>
             </article>
           ))}
+        </div>
+        <div className="mt-10 rounded-[2rem] bg-[var(--color-cream)] p-6 ring-1 ring-slate-200 sm:p-8">
+          <h3 className="font-heading text-2xl font-bold tracking-tight text-slate-900">
+            Co to znamená v praxi
+          </h3>
+          <ul className="mt-5 grid gap-3 text-base leading-7 text-slate-700 md:grid-cols-2">
+            {practiceItems.map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-1 text-[var(--color-accent-deep)]">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
     </section>
@@ -233,27 +249,28 @@ export function InsightSection() {
     <section className="bg-slate-100">
       <Container className="grid gap-8 py-16 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <SectionEyebrow>Důležitý rozdíl</SectionEyebrow>
+          <SectionEyebrow>Výsledek spolupráce</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Problém není nástroj.
+            Místo další tabulky vznikne konkrétní návrh řešení.
             <span className="block text-[var(--color-accent-deep)]">
-              Problém je, že ve firmě chybí sdílený přehled.
+              A podle potřeby první funkční etapa.
             </span>
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
             <p>
-              Jakmile přes tabulku řídíte stav, odpovědnost, návaznost kroků a spolupráci
-              více lidí, přehled se začne rozpadat.
+              Cílem není jen pojmenovat problém. Cílem je navrhnout, jak má vypadat evidence,
+              stavový workflow a předávání mezi obchodem a realizací, aby se práce dala řídit
+              bez neustálého dohledávání.
             </p>
             <p>
-              Proto většinou nejde o “lepší Excel”. Jde o to správně určit, co má být vidět,
-              kdo má další krok a kde se proces zbytečně láme.
+              Často stačí menší interní aplikace, dashboard nebo první etapa systému na míru,
+              která odstraní nejhorší ruční kroky a připraví prostor pro další rozvoj.
             </p>
           </div>
         </div>
         <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
           <h3 className="font-heading text-2xl font-bold tracking-tight text-slate-900">
-            Co typicky dostanete
+            Co typicky získáte
           </h3>
           <ul className="mt-6 space-y-4 text-base leading-7 text-slate-700">
             {insightItems.map((item) => (
@@ -276,7 +293,7 @@ export function SituationsSection() {
         <div className="max-w-3xl">
           <SectionEyebrow>Typické situace</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            S tímto se na mě firmy obrací nejčastěji
+            Kde Excel nejčastěji přestává stačit
           </h2>
         </div>
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -302,11 +319,11 @@ export function ProcessSection() {
         <div className="mx-auto max-w-3xl text-center">
           <SectionEyebrow>Jak to probíhá</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Rychlý a praktický postup
+            Krátký postup bez zbytečné analýzy navíc
           </h2>
           <p className="mt-4 text-lg leading-8 text-slate-600">
-            Cíl není otevřít velký projekt. Cíl je rychle zjistit, kde se přehled láme a co má
-            smysl řešit jako první.
+            Cílem je rychle pochopit problém, navrhnout malou první etapu a vyřešit
+            nejkritičtější část Excelu, pokud dává spolupráce smysl.
           </p>
         </div>
         <div id="jak-to-probiha" className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -334,7 +351,7 @@ export function FitSection() {
             Pro koho to dává smysl
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
-            Pro firmy, které chtějí rychle udělat pořádek v zakázkách
+            Pro firmy, které chtějí konkrétní zlepšení, ne obří ERP
           </h2>
           <ul className="mt-6 space-y-4 text-base leading-7 text-slate-300">
             {fitItems.goodFit.map((item) => (
@@ -388,22 +405,24 @@ export function LeadFormSection() {
         <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-amber-200 sm:p-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-deep)]">
-              Nezávazný první krok
+              Nezávazně a bez tlaku na velký projekt
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Popište stručně vaši situaci
+              Popište, kde vám Excel začíná překážet
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-600">
-              Po odeslání se vám ozvu zpět a domluvíme krátký úvodní call. Během něj společně
-              vyhodnotíme, kde se přehled láme a co má smysl řešit jako první.
+              Stačí pár vět o tom, kde dnes držíte poptávky, nabídky nebo zakázky a co se
+              nejčastěji dohledává ručně. Ozvu se vám zpět a navrhnu krátký call, pokud bude
+              dávat smysl.
             </p>
             <p className="mt-3 text-base leading-7 text-slate-500">
-              Úvodní call je nezávazný a obvykle stačí 20-30 minut.
+              Není to závazná poptávka ani start velkého projektu. Většinou za 20-30 minut
+              zjistím, jestli dává smysl Excel nahrazovat, nebo jestli zatím stačí menší úprava.
             </p>
           </div>
           <LeadForm />
           <div className="mt-6 border-t border-slate-200 pt-6 text-sm leading-6 text-slate-500">
-            Raději to chcete nejdřív stručně probrat e-mailem? Napište na{" "}
+            Chcete nejdřív jen poslat stručný popis současné evidence? Napište na{" "}
             <TrackedAnchor
               href={`mailto:${siteConfig.email}`}
               className="font-medium text-slate-900 underline"

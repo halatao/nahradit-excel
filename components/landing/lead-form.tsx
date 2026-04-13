@@ -22,7 +22,13 @@ const initialValues: LeadFormValues = {
   message: "",
 };
 
-const areaOptions = ["Poptávky", "Nabídky", "Zakázky", "Přehled nad vším"];
+const areaOptions = [
+  "Evidence poptávek",
+  "Nabídky",
+  "Evidence zakázek",
+  "Reporting / přehled",
+  "Nevím, potřebuji poradit",
+];
 
 function validate(values: LeadFormValues) {
   const errors: LeadFormErrors = {};
@@ -233,7 +239,7 @@ export function LeadForm() {
 
       <div className="md:col-span-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="text-sm leading-6 text-slate-500">
-          Nezávazně. Bez tlačení do velkého projektu.
+          Nezávazně. Bez tlaku na velký projekt.
           <br />
           Odesláním souhlasíte se zpracováním údajů za účelem zpětného kontaktování.
         </div>
@@ -243,7 +249,7 @@ export function LeadForm() {
           disabled={state.submitting}
           className="inline-flex min-h-12 items-center justify-center rounded-2xl bg-slate-900 px-6 py-3 text-base font-semibold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
         >
-          {state.submitting ? "Odesílám..." : "Domluvit úvodní call"}
+          {state.submitting ? "Odesílám..." : "Zjistit, jestli to dává smysl"}
         </button>
       </div>
 

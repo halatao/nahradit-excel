@@ -1,152 +1,180 @@
 export const quickTags = [
-  "Poptávky v e-mailu",
-  "Nabídky ručně",
-  "Zakázky v Excelu",
-  "Stav se dohledává",
+  "Poptávky a nabídky",
+  "Evidence zakázek",
+  "Workflow firmy",
+  "Dashboard místo tabulek",
 ] as const;
 
 export const trustCards = [
   {
-    title: "Rozumím procesům i vývoji",
-    description: "Neřeším jen software, ale i to, jak firma reálně funguje v provozu.",
-  },
-  {
-    title: "Rychlý a realistický první krok",
+    title: "Návrh i vývoj v jedněch rukou",
     description:
-      "Cílem není nafouknout scope, ale určit nejslabší místo a navrhnout smysluplné řešení.",
+      "Neodděluji konzultaci od realizace. Navrhnu řešení, které jde opravdu postavit a používat.",
   },
   {
-    title: "Návrh i zavedení do praxe",
-    description: "Podle potřeby pomohu nejen s návrhem, ale i s rychlou realizací první etapy.",
+    title: "První etapa místo velkého systému",
+    description:
+      "Začnu nejkritičtější částí Excelu: evidence, předávání, stav zakázek nebo reporting.",
+  },
+  {
+    title: "B2B provoz bez agenturní vrstvy",
+    description:
+      "Jednáte přímo se mnou. Mluvím s lidmi, kteří proces používají, a překládám jejich potřeby do jednoduchého systému.",
   },
 ] as const;
 
 export const problemItems = [
   {
-    title: "Poptávky se ztrácí",
-    description: "Není jasné, kdo s klientem mluvil, co už se poslalo a co má být další krok.",
+    title: "Souborů je víc než pravdy",
+    description:
+      "Každý má jinou verzi tabulky, někdo doplňuje data bokem a není jisté, podle čeho se má řídit práce.",
   },
   {
-    title: "Nabídky mají více verzí",
-    description: "Kopírování starých dokumentů šetří čas jen do chvíle, než vznikne chaos.",
+    title: "Stav se pořád dohledává",
+    description:
+      "U poptávek, nabídek a zakázek není na první pohled jasné, co čeká, co stojí a kdo má další krok.",
   },
   {
-    title: "Zakázky nejsou přehledné",
-    description: "Není jedno místo, kde by bylo hned vidět, co běží, co stojí a co je hotové.",
+    title: "Informace se předávají ručně",
+    description:
+      "Obchod, realizace a vedení si posílají detaily e-mailem, telefonem nebo přes chat a část kontextu mizí.",
   },
   {
     title: "Přehled drží jeden člověk",
-    description: "Jakmile nestíhá nebo není po ruce, firma okamžitě ztrácí tempo i orientaci.",
+    description:
+      "Když není po ruce, firma ztrácí orientaci. Chybí jednotné místo, kde je vidět aktuální stav i historie.",
   },
 ] as const;
 
 export const intentItems = [
   {
     title: "Evidence poptávek",
-    description: "Kde se poptávka eviduje, v jakém je stavu a co je další krok.",
+    description:
+      "Jedno místo pro nové poptávky, stav zpracování, odpovědného člověka a další krok.",
   },
   {
-    title: "Přehled stavu nabídek",
-    description: "Které nabídky čekají, které jsou schválené a co je rozpracované.",
+    title: "Nabídky a schvalování",
+    description:
+      "Přehled, co je rozpracované, odeslané, čeká na reakci nebo se má připomenout.",
   },
   {
-    title: "Řízení zakázek",
-    description: "Jasný stav zakázky, odpovědnost a návaznost mezi obchodem a realizací.",
+    title: "Evidence zakázek",
+    description:
+      "Jasný stav zakázky od přijetí po realizaci, včetně termínů, odpovědnosti a důležitých poznámek.",
   },
   {
-    title: "Předávání mezi týmy",
-    description: "Méně ručních předání a menší riziko ztracených informací.",
+    title: "Workflow mezi lidmi",
+    description:
+      "Kdo má co udělat, co se předává dál a kde se proces zbytečně zasekává.",
   },
   {
-    title: "Méně dohledávání",
-    description: "Místo volání a hledání v e-mailech rychlý a sdílený přehled.",
+    title: "Reporting a dashboard",
+    description:
+      "Sdílený pohled pro vedení nebo tým: co běží, co hoří, co čeká a kde vzniká zpoždění.",
   },
   {
-    title: "První realistický krok",
-    description: "Ne velký projekt, ale rozumná první etapa, která začne dávat smysl hned.",
+    title: "Sdílený přehled místo e-mailů",
+    description:
+      "Méně ručního dohledávání v inboxech a tabulkách, více práce podle jednoho aktuálního zdroje.",
   },
 ] as const;
 
+export const practiceItems = [
+  "Evidence poptávek: kdo ji řeší, v jakém je stavu a co má být další krok",
+  "Tvorba a správa nabídek bez hledání poslední verze v dokumentech a e-mailech",
+  "Přehled zakázek: co běží, co stojí, co je hotové a kde hrozí zpoždění",
+  "Termíny a odpovědnosti viditelné pro lidi, kteří s nimi opravdu pracují",
+  "Jednoduchý reporting nebo dashboard pro vedení bez ručního skládání tabulek",
+] as const;
+
 export const insightItems = [
-  "Vyhodnocení nejslabšího místa v procesu",
-  "Návrh prvního realistického kroku",
-  "Doporučení, co řešit hned a co zatím nechat být",
-  "Podle potřeby i rychlé zavedení do praxe",
+  "Návrh jednoduchého interního systému nebo workflow aplikace",
+  "Rozdělení řešení na malou první etapu a další možné kroky",
+  "Přehlednější návaznost mezi obchodem, nabídkou a realizací",
+  "Méně ručního přepisování, předávání a dohledávání stavu",
+  "Podle potřeby i realizace první funkční verze",
 ] as const;
 
 export const situationsItems = [
   {
-    title: "Poptávky, nabídky a zakázky žijí odděleně",
+    title: "Výroba a zakázková činnost",
     description:
-      "Poptávky v e-mailu, nabídky v dokumentech a zakázky v Excelu bez jednoho sdíleného přehledu.",
+      "Poptávka přijde e-mailem, nabídka se připraví ručně a po schválení se zakázka hlídá v tabulce bez jasného stavu.",
   },
   {
-    title: "Přehled drží hlavně konkrétní člověk",
+    title: "Služby a realizace pro klienty",
     description:
-      "Jakmile není po ruce, firma ztrácí orientaci, stav zakázky i jistotu, co je další krok.",
+      "Tým řeší více klientů najednou, předává si úkoly ručně a vedení potřebuje rychle vidět, co je rozpracované.",
   },
   {
-    title: "Firma nechce ERP, ale už nechce ani chaos",
+    title: "Menší obchodní tým",
     description:
-      "Potřebuje rychle určit první smysluplný krok, ne otevírat velký a drahý projekt.",
+      "Poptávky, nabídky a follow-upy běží v e-mailu nebo osobních tabulkách a chybí společný pipeline přehled.",
   },
 ] as const;
 
 export const processItems = [
   {
-    title: "Krátký úvodní call",
-    description: "Projdeme, jak dnes fungujete a kde se nejčastěji ztrácí přehled.",
+    title: "Krátký call",
+    description:
+      "Ukážete mi, co dnes běží v Excelu, kdo s tím pracuje a kde vzniká nejvíc dohledávání nebo chyb.",
   },
   {
-    title: "Vyhodnocení a návrh prvního kroku",
-    description: "Řeknu vám, co má smysl řešit teď, co později a kde je nejslabší místo procesu.",
+    title: "Návrh první etapy",
+    description:
+      "Navrhnu malý první krok: třeba evidenci, dashboard, workflow aplikaci nebo menší automatizaci.",
   },
   {
-    title: "Podle potřeby realizace",
-    description: "Pokud to bude dávat smysl, navážeme rychlým zavedením první funkční etapy.",
+    title: "Realizace, když to dává smysl",
+    description:
+      "Pokud si sedne rozsah i očekávání, navážu návrhem a vývojem první funkční verze. Když Excel zatím stačí, řeknu to rovnou.",
   },
 ] as const;
 
 export const fitItems = {
   goodFit: [
-    "Firmy, kde se propojují poptávky, nabídky a realizace",
-    "Procesy, kde je více lidí a více rozpracovaných případů najednou",
-    "Situace, kde se přehled drží ručně mezi e-mailem, tabulkou a lidmi",
+    "Už cítíte chaos v poptávkách, nabídkách, zakázkách nebo předávání mezi lidmi",
+    "Chcete konkrétní zlepšení, které ušetří dohledávání, přepisování a chyby",
+    "Nechcete hned robustní ERP, ale potřebujete první rozumný krok k internímu systému",
+    "Máte opakovaný proces, více lidí v týmu a jasnou bolest, kterou chcete řešit",
   ],
   badFit: [
-    "už máte plně funkční systém a problém necítíte",
-    "chcete hned robustní ERP pro složitou organizaci",
-    "hledáte jen nejlevnější software bez řešení procesu",
+    "zatím evidujete pár položek měsíčně a Excel vám reálně nekomplikuje práci",
+    "hledáte hotové ERP se všemi moduly, účetnictvím a skladovým hospodářstvím hned od začátku",
+    "chcete jen nejlevnější nástroj bez ochoty upravit způsob práce",
+    "není jasné, kdo bude řešení ve firmě používat a kdo za něj ponese odpovědnost",
   ],
 } as const;
 
 export const faqItems = [
   {
-    question: "Dává to smysl i pro menší firmu?",
+    question: "Kdy dává smysl nahradit Excel a kdy ještě ne?",
     answer:
-      "Ano, pokud už se proces opakuje dost často a současný způsob evidence začíná brzdit práci nebo zvyšovat chybovost.",
+      "Dává to smysl ve chvíli, kdy tabulka řídí opakovaný proces, pracuje s ní víc lidí a stav se často dohledává ručně. Pokud máte pár jednoduchých záznamů měsíčně a Excel nikoho nebrzdí, vlastní systém by byl zatím zbytečný.",
   },
   {
-    question: "Musíme hned měnit celý systém?",
-    answer: "Ne. Většinou začínáme malým prvním krokem, ne velkým projektem.",
-  },
-  {
-    question: "Umíte navrhnout i realizovat?",
+    question: "Musí z toho být velký projekt?",
     answer:
-      "Ano. Podle potřeby pomohu jak s návrhem, tak i s rychlým zavedením první funkční etapy.",
+      "Nemusí. Často stačí malá první etapa: evidence poptávek, přehled zakázek, jednoduchý workflow nebo dashboard. Cílem je vyřešit největší bolest v Excelu, ne přepsat celou firmu najednou.",
   },
   {
-    question: "Co když zatím nevíme, jaké řešení chceme?",
-    answer: "To nevadí. Právě od toho je první call a vyhodnocení situace.",
-  },
-  {
-    question: "Kolik času to bude chtít z naší strany?",
+    question: "Umíte řešení i postavit?",
     answer:
-      "Na začátku obvykle stačí krátký úvodní call a základní popis toho, jak dnes fungujete. Cílem není vás zatížit dalším projektem, ale rychle určit nejslabší místo a první rozumný krok.",
+      "Ano. Pomohu s návrhem i vývojem interního systému na míru. Pokud se ukáže, že je lepší hotový nástroj nebo menší automatizace, řeknu to rovnou.",
+  },
+  {
+    question: "Co když zatím nevíme, jaké řešení přesně chceme?",
+    answer:
+      "To je běžné. Stačí popsat, co dnes běží v Excelu, kde vznikají chyby a kdo potřebuje přehled. Z toho se dá navrhnout první rozumný krok, případně rovnou říct, že zatím není potřeba nic stavět.",
+  },
+  {
+    question: "Kolik času to bude chtít od nás?",
+    answer:
+      "Na začátku obvykle stačí 20-30 minut a základní popis současné evidence. U realizace je potřeba dostupnost člověka, který proces zná, ale cílem není zatížit tým další administrativou.",
   },
   {
     question: "Kolik to obvykle stojí?",
     answer:
-      "Záleží na rozsahu, ale obvykle začínáme malým prvním krokem, ne velkým projektem na měsíce. Smyslem je rychle vyřešit to, co vás dnes brzdí nejvíc.",
+      "Záleží na rozsahu a technickém řešení. Menší první etapa nebo prototyp bývá úplně jiná investice než kompletní interní systém. Po úvodním callu proto raději navrhnu realistický rozsah a orientační rámec, než abych posílal univerzální ceník.",
   },
 ] as const;
