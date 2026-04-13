@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: "Přehled v zakázkách bez velkého ERP projektu | nahradit-excel.cz",
   description:
     "Ztrácíte přehled v poptávkách, nabídkách a zakázkách? Pomáhám firmám dát procesům jasný stav, další krok a sdílený přehled bez velkého ERP projektu.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   alternates: {
     canonical: "/",
   },
@@ -45,6 +50,14 @@ export const metadata: Metadata = {
   creator: siteConfig.displayName,
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: landingConfig.name,
+  url: landingConfig.siteUrl,
+  logo: `${landingConfig.siteUrl}/favicon.png`,
+} as const;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,6 +68,14 @@ export default function RootLayout({
       lang="cs"
       className={`${headingFont.variable} ${bodyFont.variable} h-full scroll-smooth`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      </head>
       <body className="min-h-full bg-[var(--color-cream)] text-[var(--color-ink)] antialiased">
         <GoogleTagManagerNoScript />
         <AnalyticsScripts />
