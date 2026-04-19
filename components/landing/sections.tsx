@@ -47,7 +47,7 @@ export function Header({ compact = false }: Readonly<{ compact?: boolean }>) {
             analyticsEvent="cta_click"
             analyticsLabel="header_cta"
           >
-            Zjistit, jestli to dává smysl
+            Domluvit nezávaznou konzultaci
           </TrackedAnchor>
         ) : null}
       </Container>
@@ -61,19 +61,18 @@ export function HeroSection() {
       <Container className="py-16 lg:py-20">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-            Interní systém na míru místo přerostlého Excelu
+            Náhrada Excelu pro řízení zakázek
           </p>
           <h1 className="mt-4 max-w-4xl font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Nahraďte Excel sdíleným přehledem pro poptávky, nabídky a zakázky.
+            Přestaňte řídit zakázky v Excelu.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200 sm:text-xl">
-            Pomáhám menším a středním firmám dostat jasný stav zakázek, méně ruční práce,
-            méně chyb a jeden sdílený přehled místo tabulek, e-mailů a telefonů.
+            Navrhnu jednoduchý interní systém pro správu poptávek, nabídek, realizací
+            a stavů zakázek. Pro firmy, kterým Excel přestal stačit.
           </p>
           <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
-            Nemusí z toho být velké ERP. Začnu konkrétním problémem, navrhnu rozumnou první
-            etapu interního systému nebo workflow aplikace a podle potřeby ji i postavím.
-            Když bude stačit upravit současnou evidenci, řeknu to rovnou.
+            Nejde o Excel šablonu ani velké ERP. Začneme tím, co dnes řeší vaše tabulky,
+            a navrhnu první praktický krok k přehlednější evidenci bez zbytečné administrativy.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <TrackedAnchor
@@ -82,13 +81,13 @@ export function HeroSection() {
               analyticsEvent="cta_click"
               analyticsLabel="hero_primary_cta"
             >
-              Zjistit, jestli má smysl nahradit Excel
+              Domluvit ukázku řešení
             </TrackedAnchor>
             <a
               href="#jak-to-probiha"
               className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-slate-700 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
-              Jak vypadá první krok
+              Jak probíhá konzultace
             </a>
           </div>
         </div>
@@ -115,7 +114,7 @@ export function TrustSection() {
               <div>
                 <h2 className="text-xl font-heading font-bold text-slate-900">Ondřej Halata</h2>
                 <p className="mt-1 text-sm text-slate-600">
-                  Vývojář interních systémů a workflow aplikací
+                  Vývojář interních systémů jako náhrady Excelu
                 </p>
                 <div className="mt-2 flex flex-wrap items-center gap-x-2 text-sm text-slate-600">
                   <a
@@ -152,12 +151,12 @@ export function TrustSection() {
               </div>
             </div>
             <p className="mt-5 text-base leading-7 text-slate-600">
-              Navrhuji a vyvíjím interní nástroje na míru tam, kde už Excel nestačí:
-              evidence zakázek, poptávky, nabídky, workflow mezi lidmi a provozní přehledy.
+              Navrhuji a vyvíjím jednoduché interní systémy tam, kde Excel přestal stačit
+              na poptávky, nabídky, realizace a stav zakázek.
             </p>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Pracuji přímo s majiteli a týmy, které potřebují praktické řešení bez agenturní
-              vrstvy a bez tlaku na zbytečně velký projekt.
+              Pracuji přímo s majiteli a týmy, které chtějí praktický první krok bez
+              zbytečně velkého a drahého řešení.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2 auto-rows-fr">
@@ -186,13 +185,13 @@ export function ProblemSection() {
     <section className="bg-slate-100">
       <Container className="py-16">
         <div className="mx-auto max-w-3xl text-center">
-          <SectionEyebrow>To je obvykle ten moment</SectionEyebrow>
+          <SectionEyebrow>Kdy Excel přestává stačit</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Kdy Excel začne brzdit firmu
+            Excel funguje, dokud proces nezačne růst
           </h2>
           <p className="mt-4 text-lg leading-8 text-slate-600">
-            Ne proto, že by byl Excel špatný. Ale jakmile v něm držíte více verzí souborů,
-            ruční předávání informací a stav zakázek, firma začne ztrácet jistotu i čas.
+            Jakmile v něm řešíte poptávky, nabídky, realizace a stavy zakázek napříč týmem,
+            začnou se ztrácet verze, kontext i čas.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -213,9 +212,9 @@ export function IntentSection() {
     <section className="bg-white">
       <Container className="py-16">
         <div className="max-w-3xl">
-          <SectionEyebrow>Co může nahradit tabulky</SectionEyebrow>
+          <SectionEyebrow>Interní software místo Excelu</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Jednoduchý interní systém pro práci, která dnes běží v Excelu a e-mailu
+            Jedno místo pro poptávky, nabídky, realizace a stavy zakázek
           </h2>
         </div>
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -251,20 +250,20 @@ export function InsightSection() {
         <div>
           <SectionEyebrow>Výsledek spolupráce</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Místo další tabulky vznikne konkrétní návrh řešení.
+            Místo další tabulky vznikne návrh jednoduchého interního systému.
             <span className="block text-[var(--color-accent-deep)]">
               A podle potřeby první funkční etapa.
             </span>
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
             <p>
-              Cílem není jen pojmenovat problém. Cílem je navrhnout, jak má vypadat evidence,
-              stavový workflow a předávání mezi obchodem a realizací, aby se práce dala řídit
+              Začneme tím, co dnes řeší Excel. Cílem je navrhnout, jak má vypadat evidence,
+              stavy a předávání mezi poptávkou, nabídkou a realizací, aby se práce dala řídit
               bez neustálého dohledávání.
             </p>
             <p>
-              Často stačí menší interní aplikace, dashboard nebo první etapa systému na míru,
-              která odstraní nejhorší ruční kroky a připraví prostor pro další rozvoj.
+              Často stačí menší interní aplikace nebo první etapa systému na míru, která
+              odstraní nejhorší ruční kroky a nepůsobí jako zbytečně robustní ERP.
             </p>
           </div>
         </div>
@@ -319,11 +318,11 @@ export function ProcessSection() {
         <div className="mx-auto max-w-3xl text-center">
           <SectionEyebrow>Jak to probíhá</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Krátký postup bez zbytečné analýzy navíc
+            Krátká konzultace bez tlaku na velký projekt
           </h2>
           <p className="mt-4 text-lg leading-8 text-slate-600">
-            Cílem je rychle pochopit problém, navrhnout malou první etapu a vyřešit
-            nejkritičtější část Excelu, pokud dává spolupráce smysl.
+            Nejdřív projdeme váš aktuální proces v Excelu. Potom navrhnu jednoduchý první
+            krok, pokud dává nahrazení tabulek smysl.
           </p>
         </div>
         <div id="jak-to-probiha" className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -351,7 +350,7 @@ export function FitSection() {
             Pro koho to dává smysl
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
-            Pro firmy, které chtějí konkrétní zlepšení, ne obří ERP
+            Pro firmy, kterým Excel přestal stačit, ale nechtějí obří ERP
           </h2>
           <ul className="mt-6 space-y-4 text-base leading-7 text-slate-300">
             {fitItems.goodFit.map((item) => (
@@ -405,24 +404,23 @@ export function LeadFormSection() {
         <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-amber-200 sm:p-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-deep)]">
-              Nezávazně a bez tlaku na velký projekt
+              Nezávazná konzultace k náhradě Excelu
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Popište, kde vám Excel začíná překážet
+              Ukažte mi, co dnes řídíte v Excelu
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-600">
-              Stačí pár vět o tom, kde dnes držíte poptávky, nabídky nebo zakázky a co se
-              nejčastěji dohledává ručně. Ozvu se vám zpět a navrhnu krátký call, pokud bude
-              dávat smysl.
+              Stačí pár vět o tom, jak dnes evidujete poptávky, nabídky, realizace nebo stavy
+              zakázek. Ozvu se zpět a nezávazně projdeme, jak může vypadat náhrada vašeho Excelu.
             </p>
             <p className="mt-3 text-base leading-7 text-slate-500">
-              Není to závazná poptávka ani start velkého projektu. Většinou za 20-30 minut
-              zjistím, jestli dává smysl Excel nahrazovat, nebo jestli zatím stačí menší úprava.
+              Není to závazná poptávka na velký software projekt. Většinou za 20-30 minut
+              navrhnu jednoduchý první krok, nebo rovnou řeknu, že Excel zatím stačí.
             </p>
           </div>
           <LeadForm />
           <div className="mt-6 border-t border-slate-200 pt-6 text-sm leading-6 text-slate-500">
-            Chcete nejdřív jen poslat stručný popis současné evidence? Napište na{" "}
+            Chcete nejdřív jen poslat stručný popis současného Excelu? Napište na{" "}
             <TrackedAnchor
               href={`mailto:${siteConfig.email}`}
               className="font-medium text-slate-900 underline"

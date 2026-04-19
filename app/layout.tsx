@@ -16,9 +16,9 @@ const bodyFont = Source_Sans_3({
 
 export const metadata: Metadata = {
   metadataBase: new URL(landingConfig.siteUrl),
-  title: "Nahradit Excel interním systémem na míru | nahradit-excel.cz",
+  title: "Náhrada Excelu pro poptávky, nabídky a zakázky | nahradit-excel.cz",
   description:
-    "Excel už nestačí na poptávky, nabídky a zakázky? Ondřej Halata navrhne a vyvine interní systém na míru, workflow nebo sdílený přehled bez velkého ERP projektu.",
+    "Přestaňte řídit poptávky, nabídky a realizace v Excelu. Ondřej Halata navrhne jednoduchý interní systém pro firmy, kterým Excel přestal stačit.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.png",
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "cs_CZ",
     url: landingConfig.siteUrl,
-    title: "Nahradit Excel interním systémem na míru | nahradit-excel.cz",
+    title: "Náhrada Excelu pro poptávky, nabídky a zakázky | nahradit-excel.cz",
     description:
-      "Pomáhám firmám nahradit přerostlý Excel jednoduchým interním systémem, workflow aplikací nebo sdíleným přehledem pro poptávky, nabídky a zakázky.",
+      "Jednoduchý interní systém místo Excelu pro správu poptávek, nabídek, realizací a stavů zakázek.",
     siteName: landingConfig.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nahradit Excel interním systémem na míru | nahradit-excel.cz",
+    title: "Náhrada Excelu pro poptávky, nabídky a zakázky | nahradit-excel.cz",
     description:
-      "Pomáhám firmám nahradit přerostlý Excel jednoduchým interním systémem, workflow aplikací nebo sdíleným přehledem pro poptávky, nabídky a zakázky.",
+      "Jednoduchý interní systém místo Excelu pro správu poptávek, nabídek, realizací a stavů zakázek.",
   },
   robots: {
     index: true,
