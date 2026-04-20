@@ -59,43 +59,60 @@ export function HeroSection() {
   return (
     <section className="bg-[var(--color-night)] text-white">
       <Container className="py-16 lg:py-20">
-        <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-            Náhrada Excelu pro řízení zakázek
-          </p>
-          <h1 className="mt-4 max-w-4xl font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Přestaňte řídit zakázky v Excelu.
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200 sm:text-xl">
-            Jednoduchý interní systém na míru, který nahradí váš Excel.
-          </p>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
-            Správa poptávek, nabídek a realizací bez chaosu v tabulkách. Vždy víte,
-            co je rozpracované, hotové a co chybí.
-          </p>
-          <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400 sm:text-base">
-            Nejde o Excel šablonu ani hotový SaaS produkt. Řešení se navrhuje podle
-            konkrétní firmy a jejího procesu.
-          </p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <TrackedAnchor
-              href="#formular"
-              className="inline-flex min-h-12 items-center justify-center rounded-2xl bg-[var(--color-accent)] px-6 py-3 text-base font-semibold text-slate-950 transition hover:bg-[var(--color-accent-strong)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
-              analyticsEvent="cta_click"
-              analyticsLabel="hero_primary_cta"
-            >
-              Ukázat řešení
-            </TrackedAnchor>
-            <a
-              href="#jak-to-probiha"
-              className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-slate-700 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-            >
-              Jak probíhá konzultace
-            </a>
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.45fr)] lg:items-center">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+              Interní nástroj pro řízení zakázek
+            </p>
+            <h1 className="mt-4 max-w-4xl font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Poptávky v mailu, zakázky v Excelu?
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200 sm:text-xl">
+              Budete mít všechny zakázky na jednom místě – s jasným stavem a dalším krokem.
+            </p>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
+              Navrhnu jednoduchý interní nástroj podle vašeho procesu. Bez složitého ERP
+              a bez zbytečně velkého projektu.
+            </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <TrackedAnchor
+                href="#formular"
+                className="inline-flex min-h-12 items-center justify-center rounded-2xl bg-[var(--color-accent)] px-6 py-3 text-base font-semibold text-slate-950 transition hover:bg-[var(--color-accent-strong)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+                analyticsEvent="cta_click"
+                analyticsLabel="hero_primary_cta"
+              >
+                Ukázat, kde se to rozpadá
+              </TrackedAnchor>
+              <a
+                href="#jak-to-probiha"
+                className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-slate-700 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
+                Jak probíhá první krok
+              </a>
+            </div>
+            <p className="mt-4 text-sm leading-6 text-slate-400">
+              Nezávazná konzultace (30 min)
+            </p>
           </div>
-          <p className="mt-4 text-sm leading-6 text-slate-400">
-            Nezávazná konzultace (30 min)
-          </p>
+          <aside className="rounded-[2rem] border border-slate-700 bg-white/5 p-6 shadow-sm">
+            <h2 className="font-heading text-xl font-bold text-white">Kde bývá problém</h2>
+            <dl className="mt-5 space-y-4 text-base leading-7">
+              {[
+                ["Poptávky", "e-mail"],
+                ["Nabídky", "Excel"],
+                ["Zakázky", "další tabulka"],
+                ["Stav", "dohledávání"],
+              ].map(([label, value]) => (
+                <div key={label} className="flex items-center justify-between gap-4 border-b border-slate-700 pb-3">
+                  <dt className="text-slate-400">{label}:</dt>
+                  <dd className="font-semibold text-slate-100">{value}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-5 rounded-2xl bg-[var(--color-accent)] p-4 text-base font-bold leading-7 text-slate-950">
+              Výsledek: chaos a nejasný další krok
+            </p>
+          </aside>
         </div>
       </Container>
     </section>
@@ -193,11 +210,10 @@ export function ProblemSection() {
         <div className="mx-auto max-w-3xl text-center">
           <SectionEyebrow>Kdy Excel přestává stačit</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Excel funguje, dokud proces nezačne růst
+            Kdy Excel přestává stačit
           </h2>
           <p className="mt-4 text-lg leading-8 text-slate-600">
-            Jakmile v něm řešíte poptávky, nabídky, realizace a stavy zakázek napříč týmem,
-            začnou se ztrácet verze, kontext i čas.
+            Jakmile řešíte poptávky, nabídky a realizace napříč týmem, začne se ztrácet přehled.
           </p>
           <p className="mt-3 text-base leading-7 text-slate-500">
             Pokud dnes evidujete zakázky v Excelu, pravděpodobně narážíte na:
@@ -211,6 +227,9 @@ export function ProblemSection() {
             </article>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-2xl rounded-2xl bg-white px-5 py-4 text-center text-base font-semibold leading-7 text-slate-700 ring-1 ring-slate-200">
+          Výsledek: víc času hledáte než pracujete.
+        </p>
       </Container>
     </section>
   );
@@ -222,6 +241,9 @@ export function IntentSection() {
       <Container className="py-16">
         <div className="max-w-3xl">
           <SectionEyebrow>Interní software místo Excelu</SectionEyebrow>
+          <p className="mt-3 text-lg font-semibold text-[var(--color-accent-deep)]">
+            Místo tří různých míst budete mít jedno.
+          </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Jedno místo pro poptávky, nabídky, realizace a stavy zakázek
           </h2>
@@ -298,7 +320,7 @@ export function ProductPreviewSection() {
           </article>
 
           <p className="my-14 rounded-2xl bg-white p-8 text-2xl font-heading font-extrabold text-[var(--color-accent-deep)] ring-1 ring-slate-200 sm:text-3xl">
-            A takhle to může vypadat místo toho:
+            A takhle to může fungovat místo toho
           </p>
 
           <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
@@ -349,13 +371,11 @@ export function FieldUseSection() {
         <div className="max-w-3xl">
           <SectionEyebrow>Práce mimo kancelář</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Funguje i v kanceláři i v terénu
+            Funguje v kanceláři i v terénu
           </h2>
           <p className="mt-4 text-lg leading-8 text-slate-600">
-            Systém funguje podle toho, jak pracujete – v kanceláři i mimo ni.
-          </p>
-          <p className="mt-3 text-lg leading-8 text-slate-600">
-            Bez přepisování informací zpět do Excelu.
+            Systém odpovídá tomu, jak vaše firma skutečně pracuje – bez přepisování
+            informací zpět do Excelu.
           </p>
         </div>
       </Container>
@@ -372,17 +392,13 @@ export function InsightSection() {
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Místo další tabulky vznikne funkční interní nástroj.
             <span className="block text-[var(--color-accent-deep)]">
-              Začínáme tím, co dnes řeší Excel – a rychle to převádíme do funkčního systému.
+              Začínáme tím, co dnes řeší Excel. A rychle to převádíme do funkčního systému.
             </span>
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
             <p>
               Nezačíná se velkým software projektem. Nejdřív vezmeme konkrétní část procesu,
               kterou dnes drží Excel, a převedeme ji do použitelné první verze.
-            </p>
-            <p>
-              Výsledkem není další návrh do šuplíku, ale funkční nástroj přizpůsobený
-              tomu, jak reálně pracujete s poptávkami, nabídkami a realizacemi.
             </p>
           </div>
         </div>
@@ -469,8 +485,7 @@ export function FitSection() {
             Pro koho to dává smysl
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
-            Pro firmy, kterým Excel přestal stačit, ale nechtějí obří ERP.
-            Potřebují mít zakázky pod kontrolou bez chaosu v tabulkách.
+            Pro firmy, kterým Excel přestal stačit
           </h2>
           <ul className="mt-6 space-y-4 text-base leading-7 text-slate-300">
             {fitItems.goodFit.map((item) => (
@@ -543,6 +558,16 @@ export function LeadFormSection() {
             <p className="mt-2 text-sm leading-6 text-slate-500">
               Nezávazná konzultace (30 min)
             </p>
+            <div className="mt-6 rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
+              <h3 className="font-heading text-base font-bold text-slate-900">
+                Co se stane po odeslání:
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+                <li>– podívám se na váš proces</li>
+                <li>– ukážu, kde se ztrácí přehled</li>
+                <li>– navrhnu první konkrétní krok</li>
+              </ul>
+            </div>
           </div>
           <LeadForm />
           <div className="mt-6 border-t border-slate-200 pt-6 text-sm leading-6 text-slate-500">

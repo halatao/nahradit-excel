@@ -27,17 +27,17 @@ export const problemItems = [
   {
     title: "Více verzí tabulek",
     description:
-      "Každý má jinou kopii Excelu a není jasné, podle které tabulky se má řídit práce.",
+      "Není jasné, která verze Excelu je aktuální a podle čeho se má řídit práce.",
   },
   {
     title: "Dohledávání stavu zakázek",
     description:
-      "Stav zakázky se hledá v tabulce, e-mailu nebo po telefonu místo v jednom přehledu.",
+      "Stav zakázky se hledá v tabulce, e-mailu nebo po telefonu.",
   },
   {
     title: "Ruční přepisování",
     description:
-      "Stejná data se opisují z e-mailu do Excelu, z nabídky do zakázky a potom do přehledu.",
+      "Stejná data se opisují z e-mailu do Excelu, z nabídky do zakázky a dál do přehledu.",
   },
   {
     title: "Chaos mezi poptávkou a realizací",
@@ -48,29 +48,29 @@ export const problemItems = [
 
 export const intentItems = [
   {
-    title: "Evidence poptávek",
+    title: "Poptávky jsou na jednom místě",
     description:
-      "Nové poptávky, odpovědný člověk, stav a další krok jsou na jednom místě místo v několika tabulkách.",
+      "Nová poptávka má odpovědného člověka, stav a další krok bez hledání v e-mailu.",
   },
   {
-    title: "Nabídky a schvalování",
+    title: "Vidíte, co je další krok",
     description:
-      "Z každé poptávky je jasné, jestli se připravuje nabídka, čeká na schválení nebo má navázat realizace.",
+      "Je jasné, jestli se připravuje nabídka, čeká na schválení nebo má navázat realizace.",
   },
   {
-    title: "Evidence zakázek",
+    title: "Každá zakázka má jasný stav",
     description:
-      "Každá zakázka má jasný stav, termín, odpovědnost a poznámky bez dohledávání v Excelu.",
+      "Zakázka má termín, odpovědnost, stav a poznámky bez dohledávání v Excelu.",
   },
   {
-    title: "Návaznost poptávka -> nabídka -> realizace",
+    title: "Poptávka navazuje na realizaci",
     description:
-      "Proces navazuje krok za krokem bez ručního přepisování mezi oddělenými soubory.",
+      "Poptávka, nabídka a realizace drží kontext bez ručního přepisování mezi soubory.",
   },
   {
     title: "Přehled pro tým i vedení",
     description:
-      "Sdílený pohled ukáže, co běží, co čeká, co je po termínu a kde je potřeba zasáhnout.",
+      "Sdílený pohled ukáže, co běží, co čeká a kde je potřeba zasáhnout.",
   },
   {
     title: "Méně ruční administrativy",
@@ -120,14 +120,14 @@ export const processItems = [
       "Krátce si projdeme, jak dnes evidujete zakázky, poptávky, nabídky a realizace.",
   },
   {
-    title: "Ukážu, co převést do systému",
+    title: "Ukážu, co přestat držet v tabulce",
     description:
-      "Oddělíme část, která má smysl převést z Excelu do jednoduchého řešení na míru.",
+      "Oddělíme části, které mají smysl převést z Excelu do jednoduššího interního řešení.",
   },
   {
-    title: "Navrhnu rozumný první krok",
+    title: "Navrhnu první použitelný krok",
     description:
-      "Dostanete praktický návrh první etapy. Když Excel zatím stačí, řeknu to rovnou.",
+      "Dostanete praktický návrh první etapy. Ne velký projekt, ale něco, co dává smysl zavést hned.",
   },
 ] as const;
 
@@ -150,12 +150,12 @@ export const faqItems = [
   {
     question: "Kdy dává smysl nahradit Excel a kdy ještě ne?",
     answer:
-      "Dává to smysl ve chvíli, kdy Excel řídí opakovaný proces, pracuje s ním víc lidí a stav poptávek, nabídek nebo zakázek se často dohledává ručně. Pokud máte pár jednoduchých záznamů měsíčně a Excel nikoho nebrzdí, vlastní systém by byl zatím zbytečný.",
+      "Když Excel řídí opakovaný proces, pracuje s ním víc lidí a stav zakázek se často dohledává ručně. Pokud máte pár jednoduchých záznamů měsíčně a Excel nikoho nebrzdí, vlastní systém zatím nedává smysl.",
   },
   {
     question: "Musí z toho být velký projekt?",
     answer:
-      "Nemusí. Často stačí malá první etapa: evidence poptávek, přehled zakázek, návaznost nabídek na realizace nebo jednoduchý provozní přehled. Cílem je vyřešit největší bolest v Excelu, ne přepsat celou firmu najednou.",
+      "Nemusí. Často stačí malá první etapa: evidence poptávek, přehled zakázek nebo návaznost nabídek na realizace. Cílem je vyřešit největší bolest v Excelu.",
   },
   {
     question: "Umíte řešení i postavit?",
@@ -165,16 +165,16 @@ export const faqItems = [
   {
     question: "Co když zatím nevíme, jaké řešení přesně chceme?",
     answer:
-      "To je běžné. Stačí popsat, co dnes běží v Excelu, kde vznikají chyby a kdo potřebuje přehled. Z toho se dá navrhnout první jednoduchý krok, případně rovnou říct, že zatím není potřeba nic stavět.",
+      "To je běžné. Stačí popsat, co dnes běží v Excelu, kde vznikají chyby a kdo potřebuje přehled. Z toho navrhnu první krok, nebo řeknu, že zatím není potřeba nic stavět.",
   },
   {
     question: "Kolik času to bude chtít od nás?",
     answer:
-      "Na začátku obvykle stačí 20-30 minut a základní popis současné evidence. U realizace je potřeba dostupnost člověka, který proces zná, ale cílem není zatížit tým další administrativou.",
+      "Na začátku obvykle stačí 20-30 minut a základní popis současné evidence. U realizace je potřeba člověk, který proces zná.",
   },
   {
     question: "Kolik to obvykle stojí?",
     answer:
-      "Záleží na rozsahu a technickém řešení. Menší první etapa nebo prototyp bývá úplně jiná investice než kompletní interní systém. Po úvodním callu proto raději navrhnu realistický rozsah a orientační rámec, než abych posílal univerzální ceník.",
+      "Záleží na rozsahu. Menší první etapa je jiná investice než kompletní interní systém. Po úvodním callu navrhnu realistický rozsah a orientační rámec.",
   },
 ] as const;

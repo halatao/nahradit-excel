@@ -227,7 +227,7 @@ export function LeadForm() {
           value={values.message}
           onChange={(event) => setFieldValue("message", event.target.value)}
           className={inputClassName(false)}
-          placeholder="Například: zakázky držíme v Excelu, nabídky řeší obchod e-mailem, montéři posílají fotky zvlášť a stav se často dohledává po telefonu..."
+          placeholder="Například: zakázky máme v Excelu, nabídky v e-mailu a stav se dohledává ručně..."
         />
         <ValidationError
           prefix="Zpráva"

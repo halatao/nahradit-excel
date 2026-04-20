@@ -21,9 +21,9 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <TrustSection />
         <ProblemSection />
         <IntentSection />
+        <TrustSection />
         <ProductPreviewSection />
         <FieldUseSection />
         <InsightSection />
