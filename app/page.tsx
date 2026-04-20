@@ -1,5 +1,6 @@
 import {
   FaqSection,
+  FieldUseSection,
   FitSection,
   FooterSection,
   Header,
@@ -9,6 +10,7 @@ import {
   LeadFormSection,
   ProblemSection,
   ProcessSection,
+  ProductPreviewSection,
   SituationsSection,
   TrustSection,
 } from "@/components/landing/sections";
@@ -22,6 +24,8 @@ export default function Home() {
         <TrustSection />
         <ProblemSection />
         <IntentSection />
+        <ProductPreviewSection />
+        <FieldUseSection />
         <InsightSection />
         <SituationsSection />
         <ProcessSection />

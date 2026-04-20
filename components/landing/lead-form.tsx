@@ -23,10 +23,10 @@ const initialValues: LeadFormValues = {
 };
 
 const areaOptions = [
-  "Poptávky v Excelu",
-  "Nabídky a schvalování",
+  "Evidence zakázek v Excelu",
+  "Poptávky a nabídky",
   "Realizace a stavy zakázek",
-  "Přehled pro tým nebo vedení",
+  "Předávání práce mezi lidmi",
   "Nevím, potřebuji poradit",
 ];
 
@@ -191,7 +191,7 @@ export function LeadForm() {
 
       <div className="md:col-span-2">
         <label htmlFor="area" className="mb-2 block text-sm font-medium text-slate-700">
-          Co dnes v Excelu řešíte nejvíc?
+          Co dnes evidujete v Excelu?
         </label>
         <select
           id="area"
@@ -218,7 +218,7 @@ export function LeadForm() {
 
       <div className="md:col-span-2">
         <label htmlFor="message" className="mb-2 block text-sm font-medium text-slate-700">
-          Stručný popis současného procesu (volitelné)
+          Jak dnes evidence funguje? (volitelné)
         </label>
         <textarea
           id="message"
@@ -227,7 +227,7 @@ export function LeadForm() {
           value={values.message}
           onChange={(event) => setFieldValue("message", event.target.value)}
           className={inputClassName(false)}
-          placeholder="Například: poptávky chodí do e-mailu, nabídky připravujeme ručně, realizace držíme v Excelu a stav zakázky se často dohledává po telefonu..."
+          placeholder="Například: zakázky držíme v Excelu, nabídky řeší obchod e-mailem, montéři posílají fotky zvlášť a stav se často dohledává po telefonu..."
         />
         <ValidationError
           prefix="Zpráva"
@@ -239,7 +239,7 @@ export function LeadForm() {
 
       <div className="md:col-span-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="text-sm leading-6 text-slate-500">
-          Nezávazně projdeme váš Excel a možný první krok.
+          Nezávazná konzultace (30 min)
           <br />
           Odesláním souhlasíte se zpracováním údajů za účelem zpětného kontaktování.
         </div>
@@ -249,7 +249,7 @@ export function LeadForm() {
           disabled={state.submitting}
           className="inline-flex min-h-12 items-center justify-center rounded-2xl bg-slate-900 px-6 py-3 text-base font-semibold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
         >
-          {state.submitting ? "Odesílám..." : "Domluvit nezávaznou konzultaci"}
+          {state.submitting ? "Odesílám..." : "Domluvit krátkou konzultaci"}
         </button>
       </div>
 

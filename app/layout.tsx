@@ -16,9 +16,9 @@ const bodyFont = Source_Sans_3({
 
 export const metadata: Metadata = {
   metadataBase: new URL(landingConfig.siteUrl),
-  title: "Náhrada Excelu pro poptávky, nabídky a zakázky | nahradit-excel.cz",
+  title: "Evidence zakázek bez Excelu | Interní systém na míru",
   description:
-    "Přestaňte řídit poptávky, nabídky a realizace v Excelu. Ondřej Halata navrhne jednoduchý interní systém pro firmy, kterým Excel přestal stačit.",
+    "Interní systém na míru pro firmy, které chtějí spravovat poptávky, nabídky, realizace a zakázky bez chaosu v Excelu.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.png",
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "cs_CZ",
     url: landingConfig.siteUrl,
-    title: "Náhrada Excelu pro poptávky, nabídky a zakázky | nahradit-excel.cz",
+    title: "Evidence zakázek bez Excelu | Interní systém na míru",
     description:
-      "Jednoduchý interní systém místo Excelu pro správu poptávek, nabídek, realizací a stavů zakázek.",
+      "Interní systém na míru místo Excelu pro správu poptávek, nabídek, realizací a stavů zakázek.",
     siteName: landingConfig.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Náhrada Excelu pro poptávky, nabídky a zakázky | nahradit-excel.cz",
+    title: "Evidence zakázek bez Excelu | Interní systém na míru",
     description:
-      "Jednoduchý interní systém místo Excelu pro správu poptávek, nabídek, realizací a stavů zakázek.",
+      "Interní systém na míru místo Excelu pro správu poptávek, nabídek, realizací a stavů zakázek.",
   },
   robots: {
     index: true,

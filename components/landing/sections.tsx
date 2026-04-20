@@ -67,12 +67,15 @@ export function HeroSection() {
             Přestaňte řídit zakázky v Excelu.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200 sm:text-xl">
-            Navrhnu jednoduchý interní systém pro správu poptávek, nabídek, realizací
-            a stavů zakázek. Pro firmy, kterým Excel přestal stačit.
+            Jednoduchý interní systém na míru, který nahradí váš Excel.
           </p>
           <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
-            Nejde o Excel šablonu ani velké ERP. Začneme tím, co dnes řeší vaše tabulky,
-            a navrhnu první praktický krok k přehlednější evidenci bez zbytečné administrativy.
+            Správa poptávek, nabídek a realizací bez chaosu v tabulkách. Vždy víte,
+            co je rozpracované, hotové a co chybí.
+          </p>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400 sm:text-base">
+            Nejde o Excel šablonu ani hotový SaaS produkt. Řešení se navrhuje podle
+            konkrétní firmy a jejího procesu.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <TrackedAnchor
@@ -81,7 +84,7 @@ export function HeroSection() {
               analyticsEvent="cta_click"
               analyticsLabel="hero_primary_cta"
             >
-              Domluvit ukázku řešení
+              Ukázat řešení
             </TrackedAnchor>
             <a
               href="#jak-to-probiha"
@@ -90,6 +93,9 @@ export function HeroSection() {
               Jak probíhá konzultace
             </a>
           </div>
+          <p className="mt-4 text-sm leading-6 text-slate-400">
+            Nezávazná konzultace (30 min)
+          </p>
         </div>
       </Container>
     </section>
@@ -193,6 +199,9 @@ export function ProblemSection() {
             Jakmile v něm řešíte poptávky, nabídky, realizace a stavy zakázek napříč týmem,
             začnou se ztrácet verze, kontext i čas.
           </p>
+          <p className="mt-3 text-base leading-7 text-slate-500">
+            Pokud dnes evidujete zakázky v Excelu, pravděpodobně narážíte na:
+          </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {problemItems.map((item) => (
@@ -216,6 +225,9 @@ export function IntentSection() {
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Jedno místo pro poptávky, nabídky, realizace a stavy zakázek
           </h2>
+          <p className="mt-4 text-lg font-semibold text-[var(--color-accent-deep)]">
+            Poptávka → Nabídka → Realizace → Dokončeno
+          </p>
         </div>
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {intentItems.map((item) => (
@@ -243,6 +255,114 @@ export function IntentSection() {
   );
 }
 
+export function ProductPreviewSection() {
+  return (
+    <section className="bg-slate-100">
+      <Container className="py-16">
+        <div className="max-w-3xl">
+          <SectionEyebrow>Ukázka systému</SectionEyebrow>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Jak může vypadat náhrada Excelu
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-slate-600">
+            Na reálném příkladu: dnes evidence v Excelu, potom přehled v systému.
+          </p>
+          <p className="mt-3 text-base leading-7 text-slate-500">
+            Tohle není jeden konkrétní produkt – ale příklad, jak může řešení vypadat.
+          </p>
+        </div>
+
+        <div className="mt-10 space-y-10">
+          <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
+            <div className="p-6">
+              <h3 className="text-xl font-heading font-bold text-slate-900">
+                Takhle dnes často vypadá evidence zakázek v Excelu
+              </h3>
+            </div>
+            <div className="overflow-x-auto border-y border-slate-200">
+              <Image
+                src="/images/landing/excel-before.png"
+                alt="Ukázka evidence zakázek v Excelu s chybějícími údaji"
+                width={1350}
+                height={326}
+                className="h-auto min-w-[1280px] max-w-none lg:min-w-full"
+              />
+            </div>
+            <div className="m-8 rounded-2xl border-2 border-red-300 bg-red-100 p-8 shadow-sm">
+              <p className="text-xl font-heading font-extrabold leading-8 text-red-950 sm:text-2xl">
+                <strong>❗ Chybí datum realizace</strong>
+                <br />
+                <span className="font-normal">→ zakázka se vůbec nedostane do výkazu práce</span>
+              </p>
+            </div>
+          </article>
+
+          <p className="my-14 rounded-2xl bg-white p-8 text-2xl font-heading font-extrabold text-[var(--color-accent-deep)] ring-1 ring-slate-200 sm:text-3xl">
+            A takhle to může vypadat místo toho:
+          </p>
+
+          <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
+            <Image
+              src="/images/landing/system-after-list.png"
+              alt="Ukázka přehledu zakázek v systému se stavem a chybějícími informacemi"
+              width={1572}
+              height={768}
+              className="h-auto w-full border-b border-slate-200"
+            />
+            <div className="p-6">
+              <h3 className="text-lg font-heading font-bold text-slate-900">
+                Všechny zakázky, jejich stav a chybějící informace vidíte okamžitě.
+              </h3>
+            </div>
+          </article>
+
+          <article className="max-w-4xl overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
+            <div className="max-h-[520px] overflow-hidden border-b border-slate-200">
+              <Image
+                src="/images/landing/system-dashboard.png"
+                alt="Ukázka dashboardu s přehledem hotových, chybějících a rozpracovaných zakázek"
+                width={1365}
+                height={768}
+                className="h-auto w-full"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-lg font-heading font-bold text-slate-900">
+                Okamžitý přehled o tom, co je hotovo, co chybí a co se řeší.
+              </h3>
+            </div>
+          </article>
+        </div>
+
+        <p className="mt-6 text-sm leading-6 text-slate-500">
+          Ukázka řešení na anonymizovaných datech
+        </p>
+      </Container>
+    </section>
+  );
+}
+
+export function FieldUseSection() {
+  return (
+    <section className="bg-white">
+      <Container className="py-16">
+        <div className="max-w-3xl">
+          <SectionEyebrow>Práce mimo kancelář</SectionEyebrow>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Funguje i v kanceláři i v terénu
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-slate-600">
+            Systém funguje podle toho, jak pracujete – v kanceláři i mimo ni.
+          </p>
+          <p className="mt-3 text-lg leading-8 text-slate-600">
+            Bez přepisování informací zpět do Excelu.
+          </p>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 export function InsightSection() {
   return (
     <section className="bg-slate-100">
@@ -250,20 +370,19 @@ export function InsightSection() {
         <div>
           <SectionEyebrow>Výsledek spolupráce</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Místo další tabulky vznikne návrh jednoduchého interního systému.
+            Místo další tabulky vznikne funkční interní nástroj.
             <span className="block text-[var(--color-accent-deep)]">
-              A podle potřeby první funkční etapa.
+              Začínáme tím, co dnes řeší Excel – a rychle to převádíme do funkčního systému.
             </span>
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
             <p>
-              Začneme tím, co dnes řeší Excel. Cílem je navrhnout, jak má vypadat evidence,
-              stavy a předávání mezi poptávkou, nabídkou a realizací, aby se práce dala řídit
-              bez neustálého dohledávání.
+              Nezačíná se velkým software projektem. Nejdřív vezmeme konkrétní část procesu,
+              kterou dnes drží Excel, a převedeme ji do použitelné první verze.
             </p>
             <p>
-              Často stačí menší interní aplikace nebo první etapa systému na míru, která
-              odstraní nejhorší ruční kroky a nepůsobí jako zbytečně robustní ERP.
+              Výsledkem není další návrh do šuplíku, ale funkční nástroj přizpůsobený
+              tomu, jak reálně pracujete s poptávkami, nabídkami a realizacemi.
             </p>
           </div>
         </div>
@@ -318,11 +437,11 @@ export function ProcessSection() {
         <div className="mx-auto max-w-3xl text-center">
           <SectionEyebrow>Jak to probíhá</SectionEyebrow>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Krátká konzultace bez tlaku na velký projekt
+            Ukážu vám, jak může vypadat náhrada vašeho Excelu
           </h2>
           <p className="mt-4 text-lg leading-8 text-slate-600">
-            Nejdřív projdeme váš aktuální proces v Excelu. Potom navrhnu jednoduchý první
-            krok, pokud dává nahrazení tabulek smysl.
+            Bez obecné IT konzultace. Krátce projdeme současnou evidenci zakázek a vybereme
+            část, kde má řešení na míru největší smysl.
           </p>
         </div>
         <div id="jak-to-probiha" className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -350,7 +469,8 @@ export function FitSection() {
             Pro koho to dává smysl
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
-            Pro firmy, kterým Excel přestal stačit, ale nechtějí obří ERP
+            Pro firmy, kterým Excel přestal stačit, ale nechtějí obří ERP.
+            Potřebují mít zakázky pod kontrolou bez chaosu v tabulkách.
           </h2>
           <ul className="mt-6 space-y-4 text-base leading-7 text-slate-300">
             {fitItems.goodFit.map((item) => (
@@ -404,18 +524,24 @@ export function LeadFormSection() {
         <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-amber-200 sm:p-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-deep)]">
-              Nezávazná konzultace k náhradě Excelu
+              Nezávazně probereme současný stav
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Ukažte mi, co dnes řídíte v Excelu
+              Ukážu vám, jak může vypadat náhrada vašeho Excelu
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-600">
-              Stačí pár vět o tom, jak dnes evidujete poptávky, nabídky, realizace nebo stavy
-              zakázek. Ozvu se zpět a nezávazně projdeme, jak může vypadat náhrada vašeho Excelu.
+              Stačí pár vět o tom, jak dnes evidujete zakázky, poptávky, nabídky nebo realizace.
+              Ozvu se zpět a projdeme, jak může vypadat řešení na míru místo Excelu.
             </p>
             <p className="mt-3 text-base leading-7 text-slate-500">
-              Není to závazná poptávka na velký software projekt. Většinou za 20-30 minut
-              navrhnu jednoduchý první krok, nebo rovnou řeknu, že Excel zatím stačí.
+              Stačí mi ukázat, jak dnes evidujete zakázky (klidně Excel). Řeknu vám, jestli
+              má smysl to řešit jinak.
+            </p>
+            <p className="mt-3 text-base font-semibold leading-7 text-slate-700">
+              Odpovím vám, jestli má smysl Excel nahrazovat právě ve vašem případě.
+            </p>
+            <p className="mt-2 text-sm leading-6 text-slate-500">
+              Nezávazná konzultace (30 min)
             </p>
           </div>
           <LeadForm />

@@ -25,24 +25,24 @@ export const trustCards = [
 
 export const problemItems = [
   {
-    title: "Více verzí Excelu",
+    title: "Více verzí tabulek",
     description:
-      "Každý má jinou kopii tabulky, data se doplňují bokem a není jasné, podle které verze se má řídit práce.",
+      "Každý má jinou kopii Excelu a není jasné, podle které tabulky se má řídit práce.",
   },
   {
-    title: "Nejasný stav zakázky",
+    title: "Dohledávání stavu zakázek",
     description:
-      "U poptávek, nabídek a realizací není na první pohled jasné, co čeká, co stojí a kdo má udělat další krok.",
+      "Stav zakázky se hledá v tabulce, e-mailu nebo po telefonu místo v jednom přehledu.",
   },
   {
     title: "Ruční přepisování",
     description:
-      "Stejná data se opisují z e-mailu do Excelu, z nabídky do zakázky a potom znovu do přehledu pro tým nebo vedení.",
+      "Stejná data se opisují z e-mailu do Excelu, z nabídky do zakázky a potom do přehledu.",
   },
   {
-    title: "Chaos mezi kroky",
+    title: "Chaos mezi poptávkou a realizací",
     description:
-      "Poptávka, nabídka a realizace žijí odděleně. Informace se dohledávají v tabulkách, e-mailech, chatech a poznámkách.",
+      "Poptávka, nabídka a realizace žijí odděleně. Kontext se ztrácí mezi tabulkami a e-maily.",
   },
 ] as const;
 
@@ -50,22 +50,22 @@ export const intentItems = [
   {
     title: "Evidence poptávek",
     description:
-      "Nové poptávky, stav zpracování, odpovědný člověk a další krok jsou na jednom místě místo v několika tabulkách.",
+      "Nové poptávky, odpovědný člověk, stav a další krok jsou na jednom místě místo v několika tabulkách.",
   },
   {
     title: "Nabídky a schvalování",
     description:
-      "Jasně vidíte, co je rozpracované, odeslané, čeká na reakci a co je potřeba připomenout.",
+      "Z každé poptávky je jasné, jestli se připravuje nabídka, čeká na schválení nebo má navázat realizace.",
   },
   {
     title: "Evidence zakázek",
     description:
-      "Zakázka má jasný stav od přijetí po realizaci, včetně termínů, odpovědnosti a důležitých poznámek.",
+      "Každá zakázka má jasný stav, termín, odpovědnost a poznámky bez dohledávání v Excelu.",
   },
   {
     title: "Návaznost poptávka -> nabídka -> realizace",
     description:
-      "Data se nepřepisují mezi oddělenými soubory. Další krok navazuje na předchozí bez ztráty kontextu.",
+      "Proces navazuje krok za krokem bez ručního přepisování mezi oddělenými soubory.",
   },
   {
     title: "Přehled pro tým i vedení",
@@ -75,24 +75,24 @@ export const intentItems = [
   {
     title: "Méně ruční administrativy",
     description:
-      "Méně dohledávání v inboxech a tabulkách, méně opisování a více práce podle jednoho aktuálního zdroje.",
+      "Méně opisování, méně dohledávání a více práce podle jednoho aktuálního zdroje.",
   },
 ] as const;
 
 export const practiceItems = [
-  "Poptávky mají odpovědného člověka, stav a jasný další krok",
-  "Nabídky navazují na poptávky bez hledání poslední verze v dokumentech a e-mailech",
-  "Realizace vychází ze schválené nabídky a drží termíny, odpovědnosti i poznámky",
-  "Tým vidí, co běží, co stojí, co je hotové a kde hrozí zpoždění",
+  "Poptávky, nabídky a realizace mohou být v jednom interním systému na míru",
+  "Každá zakázka má jasný stav: rozpracováno, čeká, hotovo nebo chybí doplnit",
+  "Návaznost procesu drží kontext od poptávky až po dokončení",
+  "Tým vidí, co běží, co stojí a co má být další krok",
   "Vedení má přehled bez ručního skládání reportů z několika Excelů",
 ] as const;
 
 export const insightItems = [
-  "Návrh jednoduchého interního systému místo přerostlého Excelu",
-  "Rozdělení řešení na malou první etapu a další možné kroky",
-  "Přehledná návaznost mezi poptávkou, nabídkou a realizací",
-  "Méně ručního přepisování, předávání a dohledávání stavu zakázky",
-  "Podle potřeby i realizace první funkční verze",
+  "První funkční verze navržená pro konkrétní část vašeho procesu",
+  "Ukázka přehledu poptávek, nabídek a realizací na jednom místě",
+  "Jasné stavy zakázek přizpůsobené obchodu, realizaci i vedení",
+  "Méně ručního přepisování a dohledávání v tabulkách",
+  "Další kroky navržené až podle reálného používání",
 ] as const;
 
 export const situationsItems = [
@@ -115,19 +115,19 @@ export const situationsItems = [
 
 export const processItems = [
   {
-    title: "Krátký call",
+    title: "Projdu s vámi současný Excel",
     description:
-      "Ukážete mi, co dnes držíte v Excelu, kdo s tím pracuje a kde vzniká nejvíc dohledávání, přepisování nebo chyb.",
+      "Krátce si projdeme, jak dnes evidujete zakázky, poptávky, nabídky a realizace.",
   },
   {
-    title: "Návrh první etapy",
+    title: "Ukážu, co převést do systému",
     description:
-      "Navrhnu jednoduchý první krok: evidenci poptávek, přehled zakázek, návaznost na nabídky nebo menší automatizaci.",
+      "Oddělíme část, která má smysl převést z Excelu do jednoduchého řešení na míru.",
   },
   {
-    title: "Realizace, když to dává smysl",
+    title: "Navrhnu rozumný první krok",
     description:
-      "Pokud si sedne rozsah i očekávání, navážu vývojem první funkční verze. Když Excel zatím stačí, řeknu to rovnou.",
+      "Dostanete praktický návrh první etapy. Když Excel zatím stačí, řeknu to rovnou.",
   },
 ] as const;
 
